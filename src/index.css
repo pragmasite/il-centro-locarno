@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 180 10% 98%;
+    --foreground: 180 25% 15%;
+
+    --card: 180 8% 96%;
+    --card-foreground: 180 25% 15%;
+
+    --popover: 180 8% 96%;
+    --popover-foreground: 180 25% 15%;
+
+    --primary: 170 50% 35%;
+    --primary-foreground: 180 10% 98%;
+
+    --secondary: 46 100% 72%;
+    --secondary-foreground: 180 25% 20%;
+
+    --muted: 180 12% 91%;
+    --muted-foreground: 180 10% 45%;
+
+    --accent: 46 100% 50%;
+    --accent-foreground: 180 10% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 15% 85%;
+    --input: 180 15% 85%;
+    --ring: 170 50% 35%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --shadow-soft: 0 4px 20px -4px hsl(170 50% 35% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(170 50% 35% / 0.15);
+  }
+
+  .dark {
+    --background: 180 25% 10%;
+    --foreground: 180 10% 95%;
+
+    --card: 180 25% 15%;
+    --card-foreground: 180 10% 95%;
+
+    --popover: 180 25% 15%;
+    --popover-foreground: 180 10% 95%;
+
+    --primary: 170 50% 55%;
+    --primary-foreground: 180 25% 10%;
+
+    --secondary: 46 100% 65%;
+    --secondary-foreground: 180 25% 10%;
+
+    --muted: 180 20% 30%;
+    --muted-foreground: 180 8% 65%;
+
+    --accent: 46 100% 50%;
+    --accent-foreground: 180 25% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 20% 25%;
+    --input: 180 20% 25%;
+    --ring: 170 50% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+  }
+}
